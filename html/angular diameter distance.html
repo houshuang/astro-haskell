@@ -1347,7 +1347,7 @@ input.engine_num_input{width:60px}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
 .ansigreen{color:#006400}
-.ansiyellow{color:#c4a000}
+.ansiyellow{color:#a52a2a}
 .ansiblue{color:#00008b}
 .ansipurple{color:#9400d3}
 .ansicyan{color:#4682b4}
@@ -1680,7 +1680,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The information presented here is placed in the public domain, and was written by <a href="https://plus.google.com/+DougBurke">Doug Burke</a>. The <a href="https://github.com/DougBurke/astro-haskell/blob/master/notebooks/angular%20diameter%20distance.ipynb">notebook</a> used to create this page is available, and questions can be asked using the <a href="https://github.com/DougBurke/astro-haskell/issues">GitHub issues page</a> or via Twitter: <a href="https://twitter.com/doug_burke">https://twitter.com/doug_burke</a>.</p>
+<p>The information presented here is placed in the public domain, and was written by
+<a href="https://plus.google.com/+DougBurke">Doug Burke</a>. The 
+<a href="https://github.com/DougBurke/astro-haskell/blob/master/notebooks/angular%20diameter%20distance.ipynb">notebook</a>
+used to create this page is available, and questions can be
+asked using the
+<a href="https://github.com/DougBurke/astro-haskell/issues">GitHub issues page</a>
+or via Twitter: <a href="https://twitter.com/doug_burke">https://twitter.com/doug_burke</a>.</p>
 </div>
 </div>
 </div>
@@ -1700,9 +1706,28 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>... or at least, a little bit of each.</p>
-<p>Although I mention a few bits and pieces below, I'm going to leave it to <a href="http://www.astro.ucla.edu/~wright/cosmolog.htm">Ned Wright's Cosmology Tutorial</a> to explain things properly. Ned's <a href="http://www.astro.ucla.edu/~wright/CosmoCalc.html">javascript Cosmology Calculator</a> should also be preferred to any of the code presented here, as I am ignoring some things (e.g. the contribution of neutrinos).</p>
-<p>This is not intended to be a Haskell tutorial, rather it is meant as an example showing that it is possible to use Haskell for Astronomy. Haskell is rather different to the computer languages commonly used in Astronomy, so I try and provide Python equivalents as I go along. One thing I am not going to do is try and convince you that Haskell is the <em>one true language</em> for Astronomy, since it isn't. I also don't think that many of the selling points of functional programming, or using a static typing system with type inference, can easily be shown in an IHaskell notebook.</p>
-<p>If you are interested in learning more about Haskell, then I suggest you look at one of the several guides to Haskell out there on the internet, such as <a href="https://github.com/bitemyapp/learnhaskell">Chris Allen's Learn Haskell</a>, <a href="https://acm.wustl.edu/functional/haskell.php">How to Learn Haskell</a>, and <a href="http://www.stephendiehl.com/what/">Stephen Diehl's &quot;What I wish I knew when learning Haskell&quot;</a>. The newly-renovated <a href="https://www.haskell.org/">Haskell home page</a> is also a useful resource.</p>
+<p>Although I mention a few bits and pieces below, I&#39;m going to leave it to
+<a href="http://www.astro.ucla.edu/~wright/cosmolog.htm">Ned Wright&#39;s Cosmology Tutorial</a>
+to explain things properly. Ned&#39;s
+<a href="http://www.astro.ucla.edu/~wright/CosmoCalc.html">javascript Cosmology Calculator</a>
+should also be preferred to any of the code presented here, as I am ignoring
+some things (e.g. the contribution of neutrinos).</p>
+<p>This is not intended to be a Haskell tutorial, rather it is meant as
+an example showing that it is possible to use Haskell for Astronomy. 
+Haskell is rather different to the computer languages commonly used in Astronomy,
+so I try and provide Python equivalents as I go along.
+One thing I am not going to do is try and convince you that Haskell
+is the <em>one true language</em> for Astronomy, since it isn&#39;t.
+I also don&#39;t think that many of the selling points of functional programming,
+or using a static typing system with type inference, can easily be
+shown in an IHaskell notebook.</p>
+<p>If you are interested in learning more about Haskell, 
+then I suggest you look at one of the several guides to Haskell out there on the internet, such as
+<a href="https://github.com/bitemyapp/learnhaskell">Chris Allen&#39;s Learn Haskell</a>,
+<a href="https://acm.wustl.edu/functional/haskell.php">How to Learn Haskell</a>,
+and
+<a href="http://www.stephendiehl.com/what/">Stephen Diehl&#39;s &quot;What I wish I knew when learning Haskell&quot;</a>.
+The newly-renovated <a href="https://www.haskell.org/">Haskell home page</a> is also a useful resource.</p>
 </div>
 </div>
 </div>
@@ -1718,7 +1743,9 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kr">import</span> <span class="nn">Data.Time</span>
@@ -1738,7 +1765,7 @@ div#notebook {
 
 <div class="output_text output_subarea ">
 <pre>
-2015-02-15 22:58:07.009619 UTC
+2015-02-23 20:04:21.617488 UTC
 </pre>
 </div>
 
@@ -1763,8 +1790,21 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I was recently re-reading the paper <a href="http://www.cis.upenn.edu/~eir/papers/2014/units/units.pdf">&quot;Experience Report: Type-checking Polymorphic Units for Astrophysics Research in Haskell&quot;</a> by Takayuki Muranushi and Richard A. Eisenberg (Haskell Symposium 2014, Gothenburg, Sweden) and wanted to try out the <a href="https://hackage.haskell.org/package/units">units</a> package. I have some (private) code that calculates cosmological quantities (distance, time, volume) that uses a different approach for handling units in Haskell (via the <a href="https://hackage.haskell.org/package/dimensional">dimensional</a> package), and thougt I'd try converting the code to use <code>units</code>. Then I thought, I should put it online for all to see - an a moment of perhaps ill-advised grandeur - and so here we are. Unfortunately, during the development of this notebook, I found that I can't actually build the <code>units</code> module (since I am using the default <code>ghc</code> version provided by Ubuntu 14.10, which is version 7.6.3), so I ended up using a variant of the <code>dimensional</code> package.</p>
-<p>I had best point out that the following is not going to present a robust, well-thought out, API for a Cosmology library!</p>
+<p>I was recently re-reading the paper
+<a href="http://www.cis.upenn.edu/~eir/papers/2014/units/units.pdf">&quot;Experience Report: Type-checking Polymorphic Units for Astrophysics Research in Haskell&quot;</a>
+by Takayuki Muranushi and Richard A. Eisenberg (Haskell Symposium 2014, Gothenburg, Sweden)
+and wanted to try out the 
+<a href="https://hackage.haskell.org/package/units">units</a> package. I have some (private) code that calculates
+cosmological quantities (distance, time, volume) that uses a different approach for handling
+units in Haskell (via the
+<a href="https://hackage.haskell.org/package/dimensional">dimensional</a>
+package), and thougt I&#39;d try converting the code to use <code>units</code>. Then I thought, I should
+put it online for all to see - an a moment of perhaps ill-advised grandeur - and so here we are.
+Unfortunately, during the development of this notebook, I found that I can&#39;t actually build
+the <code>units</code> module (since I am using the default <code>ghc</code> version provided by Ubuntu 14.10, which
+is version 7.6.3), so I ended up using a variant of the <code>dimensional</code> package.</p>
+<p>I had best point out that the following is not going to present a robust, well-thought
+out, API for a Cosmology library!</p>
 </div>
 </div>
 </div>
@@ -1783,8 +1823,17 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is an <a href="http://gibiansky.github.io/IHaskell/">IHaskell</a> notebook, which uses the notebook features of <a href="http://ipython.org/">IPython</a> to support an interactive Haskell environment. Now, Haskell compilers tend to provide an interactive environment - commonly known as a <a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"><code>repl</code></a> - but the advantage of IHaskell is the HTML support and easy display of non-textual items (so, similar to why people like IPython notebooks when there's the <code>ipython</code> command-line environment).</p>
-<p>Since this is an interactive environment, there are several differences to how code would be written and run in compiled code, but we can ignore these for now.</p>
+<p>This is an
+<a href="http://gibiansky.github.io/IHaskell/">IHaskell</a>
+notebook, which uses the notebook features of
+<a href="http://ipython.org/">IPython</a> to support an interactive Haskell environment.
+Now, Haskell compilers tend to provide an interactive environment - commonly known as a
+<a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"><code>repl</code></a> - but the
+advantage of IHaskell is the HTML support and easy display of non-textual items (so,
+similar to why people like IPython notebooks when there&#39;s the <code>ipython</code> command-line
+environment).</p>
+<p>Since this is an interactive environment, there are several differences to how code would
+be written and run in compiled code, but we can ignore these for now.</p>
 </div>
 </div>
 </div>
@@ -1804,8 +1853,12 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This section can be skipped if you are not interested in trying the code out.</p>
-<p>For this analysis, I am using the default set of packages on my Ubuntu 14.10 machine: <code>ghc</code> version 7.6.3, the Haskell compiler, and <code>cabal-install</code> (at version 1.20.0), which is used for package management (e.g. is is something like <code>pip</code>). Later versions should (hopefully) work, but earlier versions may not (the <code>cabal sandbox</code> command needs a <code>cabal-install</code> version of at least 1.18 and I don't know how well ghc version 7.4 or earlier are going to work).</p>
-<p>With these installed, and having moved to a new directory, I set up a &quot;sandbox&quot; environment in which to install the Haskell packages (to avoid conflicting packages and to make it easy to remove or update changes for just this project), and enter</p>
+<p>For this analysis, I am using the default set of packages on my Ubuntu 14.10 machine: <code>ghc</code> version 7.6.3, the
+Haskell compiler, and <code>cabal-install</code>
+(at version 1.20.0), which is used for package management (e.g. is is something like <code>pip</code>).
+Later versions should (hopefully) work, but earlier versions may not (the <code>cabal sandbox</code> command needs a <code>cabal-install</code> version of at least 1.18 and I don&#39;t know how well ghc version 7.4 or earlier are going to work).</p>
+<p>With these installed, and having moved to a new directory, I set up a &quot;sandbox&quot; environment in which to
+install the Haskell packages (to avoid conflicting packages and to make it easy to remove or update changes for just this project), and enter</p>
 <pre><code>% cabal update
 % cabal sandbox init
 % cabal install integration chart-diagrams ihaskell ihaskell-blaze --dry-run
@@ -1823,8 +1876,8 @@ Downloading NumInstances-1.4...
 Downloading OneTuple-0.2.1...
 ...
 ... and wait quite a while
-...</code></pre>
-<p>This will create (if it doesn't already) the directory <code>~/.cabal/</code> as well as <code>.cabal-sandbox/</code> in the current directory.</p>
+...
+</code></pre><p>This will create (if it doesn&#39;t already) the directory <code>~/.cabal/</code> as well as <code>.cabal-sandbox/</code> in the current directory.</p>
 <p>At this point you should be able to say</p>
 <pre><code>% cabal repl
 GHCi, version 7.6.3: http://www.haskell.org/ghc/  :? for help
@@ -1833,8 +1886,8 @@ Loading package integer-gmp ... linking ... done.
 Loading package base ... linking ... done.
 Prelude&gt; import Numeric.Integration.TanhSinh
 Prelude Numeric.Integration.TanhSinh&gt; :quit
-Leaving GHCi.</code></pre>
-<p>which checks that things are set up correctly.</p>
+Leaving GHCi.
+</code></pre><p>which checks that things are set up correctly.</p>
 <p>We now need to run IHaskell, which will then set up its own version of IPython (unless it can find one it is able to use), and store it in <code>~/.ihaskell/</code>.</p>
 <pre><code>% mkdir notebooks
 % cabal exec IHaskell -- notebook --serve=notebooks/
@@ -1850,8 +1903,13 @@ Creating IPython profile.
 ... normal ipython notebook output
 ...
 2015-02-09 19:28:24.287 [NotebookApp] The IPython Notebook is running at: http://localhost:8778/
-2015-02-09 19:28:24.287 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</code></pre>
-<p>At this point you should be able to go the URL where the server is running and start a notebook to follow along. If you just want to try a few things out, then the <a href="https://tryhaskell.org/">Try Haskell!</a> and <a href="https://www.fpcomplete.com/page/project-build">FP Complete</a> sites provide on-line environments for trying out Haskell.</p>
+2015-02-09 19:28:24.287 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+</code></pre><p>At this point you should be able to go the URL where the server is running and start a notebook to follow along. If you just
+want to try a few things out, then the 
+<a href="https://tryhaskell.org/">Try Haskell!</a>
+and
+<a href="https://www.fpcomplete.com/page/project-build">FP Complete</a>
+sites provide on-line environments for trying out Haskell.</p>
 <p>For reference, the versions of the major packages used in this notebook are (<code>dimensional-tf</code> is added in later):</p>
 <pre><code>cabal exec ghc-pkg -- list | egrep -i &#39;ihaskell|integration|dimensional|chart&#39; 
     Chart-1.3.3
@@ -1859,7 +1917,8 @@ Creating IPython profile.
     dimensional-tf-0.3.0.1
     ihaskell-0.4.3.0
     ihaskell-blaze-0.1.0.0
-    integration-0.2.0.1</code></pre>
+    integration-0.2.0.1
+</code></pre>
 </div>
 </div>
 </div>
@@ -1878,16 +1937,23 @@ Creating IPython profile.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I just load in a few modules that will be used later, for displaying a graph. In Haskell, the form <code>import a</code> loads all the symbols defined for export from the module <code>a</code>; that is, it is like Python's <code>from a import *</code>. There are ways to import just one or more symbols, or to load in a module using a qualified name, both of which are used later.</p>
+<p>Here I just load in a few modules that will be used later, for displaying
+a graph. In Haskell, the form <code>import a</code> loads all the symbols defined for
+export from the module <code>a</code>; that is, it is like Python&#39;s <code>from a import *</code>.
+There are ways to import just one or more symbols, or
+to load in a module using a qualified name, both of which are used later.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="kr">import</span> <span class="nn">IHaskell.Display</span>
+<div class="highlight"><pre><span class="kt">:</span><span class="n">option</span> <span class="n">no</span><span class="o">-</span><span class="n">pager</span>
+<span class="kr">import</span> <span class="nn">IHaskell.Display</span>
 <span class="kr">import</span> <span class="nn">Graphics.Rendering.Chart.Backend.Diagrams</span>
 
 <span class="kr">import</span> <span class="nn">Graphics.Rendering.Chart.Easy</span>
@@ -1903,13 +1969,24 @@ Creating IPython profile.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Normally we would just install the <a href="https://hackage.haskell.org/package/ihaskell-charts">ihaskell-charts</a> package and not have to bother with this, but version <code>0.1.0.0</code> of this package does not build with version <code>1.3</code> of <a href="https://hackage.haskell.org/package/Chart">Chart</a>. There is a fix for this on the GitHub version of <code>ihaskell-charts</code> but it's also possible to write it directly by converting the output of Chart into a form that the <a href="https://hackage.haskell.org/package/ihaskell-blaze">ihaskell-blaze</a> package knows how to display.</p>
+<p>Normally we would just install the 
+<a href="https://hackage.haskell.org/package/ihaskell-charts">ihaskell-charts</a> 
+package and not have to bother with this, but version <code>0.1.0.0</code> of
+this package does not build with version <code>1.3</code> of
+<a href="https://hackage.haskell.org/package/Chart">Chart</a>. There is a fix
+for this on the GitHub version of <code>ihaskell-charts</code> but it&#39;s also
+possible to write it directly by converting the output of Chart
+into a form that the 
+<a href="https://hackage.haskell.org/package/ihaskell-blaze">ihaskell-blaze</a>
+package knows how to display.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c1">-- For the purposes of this notebook you do not need to understand this</span>
@@ -1944,20 +2021,34 @@ Creating IPython profile.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I want to calculate the <a href="http://en.wikipedia.org/wiki/Angular_diameter_distance">angular-diameter distance</a> to a source, so that I can find out what the projected separation between two points is when all I know is a redshift and an angle. The parameters we are interested in are the redshift of the source, <span class="math">\(z\)</span>, the matter-density (<span class="math">\(\Omega_m\)</span>), the vacuum-density (<span class="math">\(\Omega_\lambda\)</span>), and Hubble's constant (<span class="math">\(H_0\)</span>).</p>
-<p>The angular-diameter distance, <span class="math">\(d_A\)</span>, is</p>
-<p><span class="math">\[d_A (z; \Omega_m, \Omega_\lambda) = \frac{c}{H_0} \frac{d_c(z; \Omega_m, \Omega_\lambda)}{1+z}\]</span></p>
-<p>where <span class="math">\(d_c\)</span> is the <a href="http://en.wikipedia.org/wiki/Comoving_distance">comoving distance</a> to the source. For simplicity, I am going to assume that we are only interested in flat cosmologies; that is, where <span class="math">\(\Omega_m + \Omega_\lambda = 1\)</span> (i.e. <span class="math">\(\Omega_k = 0\)</span>), which leaves me to calculate:</p>
-<p><span class="math">\[d_A (z; \Omega_m) = \frac{c}{H_0} \frac{\int_0^z f(z; \Omega_m) dz}{1+z}\]</span></p>
+<p>I want to calculate the 
+<a href="http://en.wikipedia.org/wiki/Angular_diameter_distance">angular-diameter distance</a>
+to a source, so that I can find out what the projected separation between
+two points is when all I know is a redshift and an angle. The parameters we
+are interested in are the redshift of the source, $z$, the
+matter-density ($\Omega_m$), the vacuum-density ($\Omega_\lambda$),
+and Hubble&#39;s constant ($H_0$).</p>
+<p>The angular-diameter distance, $d_A$, is </p>
+<p>$$d_A (z; \Omega_m, \Omega_\lambda) = \frac{c}{H_0} \frac{d_c(z; \Omega_m, \Omega_\lambda)}{1+z}$$</p>
+<p>where $d_c$ is the 
+<a href="http://en.wikipedia.org/wiki/Comoving_distance">comoving distance</a>
+to the source. For simplicity,
+I am going to assume that we are only interested in flat cosmologies; that
+is, where $\Omega_m + \Omega_\lambda = 1$ (i.e. $\Omega_k = 0$), which
+leaves me to calculate:</p>
+<p>$$d_A (z; \Omega_m) = \frac{c}{H_0} \frac{\int_0^z f(z; \Omega_m) dz}{1+z}$$</p>
 <p>where</p>
-<p><span class="math">\[f (z; \Omega_m) = 1 / \sqrt{ (1+z)^2 (1 + \Omega_m z) - (2+z) (1-\Omega_m) z }\]</span></p>
-<p>So, I start by defining the <span class="math">\(f\)</span> function, which has arguments of <span class="math">\(\Omega_m\)</span> (<code>om</code>) and redshift (<code>z</code>):</p>
+<p>$$f (z; \Omega_m) = 1 / \sqrt{ (1+z)^2 (1 + \Omega_m z) - (2+z) (1-\Omega_m) z }$$</p>
+<p>So, I start by defining the $f$ function, which has arguments of $\Omega_m$ (<code>om</code>)
+and redshift (<code>z</code>):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[4]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c1">-- Calculate f(z; omega_m). The first argument is the matter density</span>
@@ -1980,25 +2071,49 @@ Creating IPython profile.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are several things to note here:</p>
 <ul>
-<li><p>The first two lines are comments.</p></li>
-<li><p>The third line gives the signature of the function: the label before <code>::</code> is the name of the function and the types of the arguments are separated by the arrows (<code>-&gt;</code>), with the last type being the value calculated by the function. So, <code>f</code> takes two <code>Double</code> values and returns a <code>Double</code>.</p>
-<p>This signature line is <em>not</em> required, since the Haskell compiler can determine the types. However the types it infers a more general than the ones I gave (it has worked out that both <code>Float</code> or <code>Double</code> could be used). I chose to force <code>Double</code> since the integration routine I use below works on <code>Double</code> types and it simplifies some of the discussion below, such as when asking for the type of the <code>g</code> function.</p></li>
-<li><p>The function arguments on line four are separated by spaces rather than brackets and commas.</p></li>
-<li><p>The definition of the function (lines four to siz) uses the <code>let xxx in yyy</code> form, which defines a set of local symbols (in this case <code>ol</code> and <code>t</code>) which are then used to calculate a value.</p></li>
-<li><p>Function application does not use brackets, so the denominator of the fraction is just <code>sqrt t</code>. However, precedence rules means that brackets may be needed to clarify what is an argument. For instance, if I had not used the temporary symbol <code>t</code> then I would have had to write <code>1 / sqrt ((1 + z)^2 * (1 + om*z) - (2 + z) * ol * z)</code>.</p></li>
+<li><p>The first two lines are comments.</p>
+</li>
+<li><p>The third line gives the signature of the function: the label before <code>::</code> is the name of the
+function and the types of the arguments are separated by the arrows (<code>-&gt;</code>), with the last 
+type being the value calculated by the function. So, <code>f</code> takes two <code>Double</code> values and
+returns a <code>Double</code>.</p>
+<p>This signature line is <em>not</em> required, since the Haskell compiler can determine the types.
+However the types it infers a more general than the ones I gave (it has worked out that
+both <code>Float</code> or <code>Double</code> could be used). I chose to force <code>Double</code> since the integration
+routine I use below works on <code>Double</code> types and it simplifies some of the discussion
+below, such as when asking for the type of the <code>g</code> function.</p>
+</li>
+<li><p>The function arguments on line four are separated by spaces rather than brackets and commas.</p>
+</li>
+<li><p>The definition of the function (lines four to siz) uses the <code>let xxx in yyy</code> form, which defines a set of
+local symbols (in this case <code>ol</code> and <code>t</code>) which are then used to calculate a value.</p>
+</li>
+<li><p>Function application does not use brackets, so the denominator of the fraction is
+just <code>sqrt t</code>. However, precedence rules means that brackets may be needed to clarify
+what is an argument. For instance, if I had not used the temporary symbol <code>t</code> then I would
+have had to write <code>1 / sqrt ((1 + z)^2 * (1 + om*z) - (2 + z) * ol * z)</code>.</p>
+</li>
 </ul>
 <p>The above is similar to the Python code:</p>
 <pre><code>def f(om,z):
     ol = 1 - om
     t = (1 + z)**2 * (1 + om*z) - (2 + z) * ol * z
-    return 1 / math.sqrt(t)</code></pre>
-<p>I now want to check how <span class="math">\(f\)</span> varies with redshift for a given <span class="math">\(\Omega_m\)</span> value (in this case I want to use a value of <code>0.3</code>, since that is close to the <a href="http://www.astro.ucla.edu/~wright/cosmolog.htm#News">currently-preferred</a> cosmological model). I can do this by taking advantage of <a href="http://en.wikipedia.org/wiki/Partial_application">partial application</a> to easily create a function that calls <code>f</code> with the first argument fixed to <code>0.3</code>:</p>
+    return 1 / math.sqrt(t)
+</code></pre><p>I now want to check how $f$ varies with redshift for a given $\Omega_m$ value (in this case
+I want to use a value of <code>0.3</code>, since that is close to the 
+<a href="http://www.astro.ucla.edu/~wright/cosmolog.htm#News">currently-preferred</a> cosmological 
+model). I can do this by
+taking advantage of
+<a href="http://en.wikipedia.org/wiki/Partial_application">partial application</a> to easily create a function
+that calls <code>f</code> with the first argument fixed to <code>0.3</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[5]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">g</span> <span class="ow">=</span> <span class="n">f</span> <span class="mf">0.3</span>
@@ -2017,17 +2132,23 @@ Creating IPython profile.
 <p>The Python version would be something like</p>
 <pre><code>def g(z):
     return f(0.3, z)
-    </code></pre>
-<p>or</p>
-<pre><code>g = lambda z: f(0.3, z)</code></pre>
-<p>Since I am often going to be interested in how things vary with redshift, I am going to make this parameter the last one, so that it makes it easy to partially apply the functions I write (as in the case of making <code>g</code> a specialized version of <code>f</code>).</p>
-<p>The <code>:type</code> command - which is part of the interactive Haskell environment rather than Haskell itself - reports the type of a symbol: in this case it shows us that <code>g</code> is a function that takes a <code>Double</code> and returns a <code>Double</code> (so it has one less &quot;<code>Double -&gt;</code>&quot; term than <code>f</code>).</p>
+</code></pre><p>or</p>
+<pre><code>g = lambda z: f(0.3, z)
+</code></pre><p>Since I am often going to be interested in how things vary with redshift, I am going to
+make this parameter the last one, so that it makes it easy to partially apply
+the functions I write (as in the case of making <code>g</code> a specialized version of <code>f</code>).</p>
+<p>The <code>:type</code> command - which is part of the interactive Haskell environment rather than 
+Haskell itself - reports the type of a symbol: in this case it shows us that <code>g</code> is
+a function that takes a <code>Double</code> and returns a <code>Double</code> (so it has one less &quot;<code>Double -&gt;</code>&quot;
+term than <code>f</code>).</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">g</span>
@@ -2067,14 +2188,21 @@ Creating IPython profile.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I am going to gloss over the fact that Haskell functions only ever accept a single argument, using <a href="http://learnyouahaskell.com/higher-order-functions">curried functions</a> to implement what appear to be multi-argument functions. It is an important point to understand if you are going to be writing Haskell, but I don't want to derail the discussion too much.</p>
-<p>Getting back to the code, I can evaluate <code>g</code> for <span class="math">\(z=0\)</span> and then <span class="math">\(z=1.2\)</span> (taking advantage of the automatic-display capabilities of the IHaskell notebook; in an actual Haskell program we would have to say something like <code>print (g 0)</code> to display the value):</p>
+<p>I am going to gloss over the fact that Haskell functions only ever accept a single argument, using 
+<a href="http://learnyouahaskell.com/higher-order-functions">curried functions</a> to implement what appear to be multi-argument functions.
+It is an important point to understand if you are going to be writing Haskell, 
+but I don&#39;t want to derail the discussion too much.</p>
+<p>Getting back to the code, I can evaluate <code>g</code> for $z=0$ and then $z=1.2$ 
+(taking advantage of the automatic-display capabilities of the
+IHaskell notebook; in an actual Haskell program we would have to say something like <code>print (g 0)</code> to display the value): </p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[7]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">g</span> <span class="mi">0</span>
@@ -2105,7 +2233,9 @@ Creating IPython profile.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[8]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">g</span> <span class="mf">1.2</span>
@@ -2139,14 +2269,21 @@ Creating IPython profile.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I want to evaluate this function for a number of different redshifts, so I want to automate this process, which leads to lists and the <code>map</code> function.</p>
-<p>In Haskell, lists of objects are represented by comma-separated values enclosed by <code>[]</code> brackets - e.g. <code>[1.2, 3.4, 9.8]</code> - and have a type of <code>[a]</code>, where <code>a</code> is the type of the list element. The <code>map</code> function takes a function which accepts one argument, as well as a list of arguments, and returns a list of values created by applying the function to each argument. That is, it has a type of:</p>
+<p>I want to evaluate this function for a number of different redshifts, so I want to 
+automate this process, which leads to lists and the <code>map</code> function.</p>
+<p>In Haskell, lists of objects are represented by comma-separated values enclosed by
+<code>[]</code> brackets - e.g. <code>[1.2, 3.4, 9.8]</code> - and have a type of <code>[a]</code>, where <code>a</code> is the
+type of the list element. The <code>map</code> function takes a function which accepts one
+argument, as well as a list of arguments, and returns a list of values created
+by applying the function to each argument. That is, it has a type of:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">map</span>
@@ -2178,13 +2315,18 @@ Creating IPython profile.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For this discussion we can ignore the <code>forall a b</code> part of the type.</p>
-<p>To be general, the function supplied to map can have different types for its input and output lists, (so <code>a</code> and <code>b</code> above) but here we will use <code>g</code> which means that the input and output lists have a type of <code>[Double]</code>:</p>
+<p>To be general, the function supplied to map can have different types for its input and output lists,
+(so <code>a</code> and <code>b</code> above)
+but here we will use <code>g</code> which means that the input and output lists have a type
+of <code>[Double]</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[10]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">map</span> <span class="n">g</span>
@@ -2221,7 +2363,9 @@ Creating IPython profile.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[11]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">map</span> <span class="n">g</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">]</span>
@@ -2255,13 +2399,19 @@ Creating IPython profile.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I want to look at <code>g</code> evaluated for a range of redshits between 0 and 10, so let's create the list of redshifts (a common scheme when naming variables in Haskell is to add a <code>s</code> for a list of values, hence the use of <code>zs</code> here) and evaluate <code>g</code> on each element:</p>
+<p>I want to look at <code>g</code> evaluated for a range of redshits
+between 0 and 10, so let&#39;s create the list of redshifts 
+(a common scheme when naming
+variables in Haskell is to add a <code>s</code> for a list of values, hence the
+use of <code>zs</code> here) and evaluate <code>g</code> on each element:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[12]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">zs</span> <span class="ow">=</span> <span class="p">[</span><span class="mi">0</span><span class="ow">::</span><span class="kt">Double</span><span class="p">,</span> <span class="mf">0.1</span> <span class="o">..</span> <span class="mi">10</span><span class="p">]</span>
@@ -2278,25 +2428,34 @@ Creating IPython profile.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The form <code>[a, a+dx .. b]</code> is similar to NumPy's <code>numpy.arange(a, b+dx, dx)</code>, so this is similar to the Python/NumPy code</p>
+<p>The form <code>[a, a+dx .. b]</code> is similar to NumPy&#39;s <code>numpy.arange(a, b+dx, dx)</code>, so this is similar to the Python/NumPy code</p>
 <pre><code>zs = numpy.arange(0, 10.1, 0.1)
 # You could use Python&#39;s map
 gs = map(g, zs)
 # or a list compreshension
-gs = [g(z) for z in zs]</code></pre>
-<p>Note that I am ignoring the difference between Python lists and NumPy arrays here.</p>
+gs = [g(z) for z in zs]
+</code></pre><p>Note that I am ignoring the difference between Python lists and NumPy arrays here.</p>
 <p>I did not need to add <code>::Double</code> to <code>0</code> when creating <code>zs</code>, but did so just to keep the types &quot;concrete&quot;. If I had said</p>
-<pre><code>zs = [0, 0.1 .. 10]</code></pre>
-<p>then <code>gs</code> would still be a list of <code>Double</code> values, but the type of <code>zs</code> would be</p>
-<pre><code>forall t. (Enum t, Fractional t) =&gt; [t]</code></pre>
-<p>and I don't really want to try and explain <a href="http://learnyouahaskell.com/types-and-typeclasses">Haskell type classes</a> (the names to the left of the <code>=&gt;</code>) here.</p>
-<p>We can finally take advantage of the display code I wrote at the start of the notebook, and use the routines from the <a href="http://hackage.haskell.org/package/Chart-1.3.3/docs/Graphics-Rendering-Chart-Easy.html"><code>Graphics.Rendering.Chart.Easy</code> module</a> of the <a href="http://hackage.haskell.org/package/Chart">Chart package</a> to display <code>gs</code> versus <code>zs</code>:</p>
+<pre><code>zs = [0, 0.1 .. 10]
+</code></pre><p>then <code>gs</code> would still be a list of <code>Double</code> values, but the type of <code>zs</code> would be</p>
+<pre><code>forall t. (Enum t, Fractional t) =&gt; [t]
+</code></pre><p>and I don&#39;t really want to try and explain 
+<a href="http://learnyouahaskell.com/types-and-typeclasses">Haskell type classes</a>
+(the names to the left of the <code>=&gt;</code>) here.</p>
+<p>We can finally take advantage of the display code I wrote at the start of the notebook, and
+use the routines from the 
+<a href="http://hackage.haskell.org/package/Chart-1.3.3/docs/Graphics-Rendering-Chart-Easy.html"><code>Graphics.Rendering.Chart.Easy</code> module</a>
+of the
+<a href="http://hackage.haskell.org/package/Chart">Chart package</a>
+to display <code>gs</code> versus <code>zs</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[13]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">toRenderable</span> <span class="p">(</span><span class="kr">do</span>
@@ -3111,8 +3270,17 @@ gs = [g(z) for z in zs]</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This command doesn't look like anything I've shown so far, and I don't really want to explain it too much, but the <code>toRenderable</code> function takes a list of actions, which describes the plot, and converts it a value with a <code>Renderable</code> type, defined in the <a href="http://hackage.haskell.org/package/Chart/">Chart</a> package, which is itself then converted into SVG and automatically displayed by the notebook, due to the code I wrote way back at the start.</p>
-<p>The list of actions is created using <a href="http://learnyouahaskell.com/a-fistful-of-monads#do-notation"><code>do</code> notation</a>, which is a way of representing a chain of actions - in this case things like &quot;set the X-axis label to 'Redshift'&quot; and &quot;plot up this list of (x,y) points&quot; - in Haskell. This is <em>very</em> terse and it's best if you just let your eyes skip over the code and focus on the plot instead.</p>
+<p>This command doesn&#39;t look like anything I&#39;ve shown so far, and I don&#39;t really want to explain it too much, but the
+<code>toRenderable</code> function takes a list of actions, which describes the plot, and converts it a value with a
+<code>Renderable</code> type, defined in the
+<a href="http://hackage.haskell.org/package/Chart/">Chart</a> package,
+which is itself then converted into SVG and automatically
+displayed by the notebook, due to the code I wrote way back at the start.</p>
+<p>The list of actions is created using 
+<a href="http://learnyouahaskell.com/a-fistful-of-monads#do-notation"><code>do</code> notation</a>, 
+which is a way of representing a chain of actions - in this case things
+like &quot;set the X-axis label to &#39;Redshift&#39;&quot; and &quot;plot up this list of (x,y) points&quot; - in Haskell. This is <em>very</em> terse
+and it&#39;s best if you just let your eyes skip over the code and focus on the plot instead.</p>
 </div>
 </div>
 </div>
@@ -3121,7 +3289,7 @@ gs = [g(z) for z in zs]</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Integrating-\(f\)">Integrating <span class="math">\(f\)</span><a class="anchor-link" href="#Integrating-\(f\)">&#182;</a></h3>
+<h3 id="Integrating-$f$">Integrating $f$<a class="anchor-link" href="#Integrating-$f$">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -3131,13 +3299,22 @@ gs = [g(z) for z in zs]</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To calculate the angular-diameter distance I need to integrate <code>f</code>. The <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">&quot;Why functional programming matters&quot; (link to PDF)</a> article by John Hughes provides a nice implementation that highlights some of the ways that <a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a> can be used to simplify code. However, it's easier to use a pre-canned solution, and in this case I have chosen to use the <a href="https://hackage.haskell.org/package/integration"><code>integration</code></a> package:</p>
+<p>To calculate the angular-diameter distance I need to integrate <code>f</code>. The 
+<a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">&quot;Why functional programming matters&quot; (link to PDF)</a>
+article by John Hughes provides a nice implementation that highlights
+some of the ways that 
+<a href="http://en.wikipedia.org/wiki/Lazy_evaluation">lazy evaluation</a> can be used to 
+simplify code. However, it&#39;s easier to use a pre-canned solution,
+and in this case I have chosen to use the 
+<a href="https://hackage.haskell.org/package/integration"><code>integration</code></a> package:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[14]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kr">import</span> <span class="nn">Numeric.Integration.TanhSinh</span>
@@ -3153,13 +3330,20 @@ gs = [g(z) for z in zs]</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are several ways to integrate up a function, and the results can be bounded to a relative or absolute limit. The function <code>g</code> is &quot;well behaved&quot;, so a simple integration scheme is likely to be sufficient. The runs below - where I have approximated <span class="math">\(\int_0^2 g(z) dz\)</span>, show that both Simpson's and the trapezoidal methods agree, so I shall use <code>trap</code> (the absolute limit of <code>1.0e-6</code> is excessive but the run times are not prohibitive here):</p>
+<p>There are several ways to integrate up a function, and the results can be bounded to a relative
+or absolute limit. The function <code>g</code> is &quot;well behaved&quot;, so a simple integration scheme is likely
+to be sufficient. The runs below - where I have approximated $\int_0^2 g(z) dz$,
+show that both Simpson&#39;s and the trapezoidal methods agree,
+so I shall use <code>trap</code> (the absolute limit of <code>1.0e-6</code> is excessive but the run times are not
+prohibitive here):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[15]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">absolute</span> <span class="mf">1.0e-6</span> <span class="p">(</span><span class="n">simpson</span> <span class="n">g</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">)</span>
@@ -3190,7 +3374,9 @@ Result {result = 1.2094712042710498, errorEstimate = 1.0959402274579588e-9, eval
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[16]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">absolute</span> <span class="mf">1.0e-6</span> <span class="p">(</span><span class="n">trap</span> <span class="n">g</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">)</span>
@@ -3224,13 +3410,16 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The result of <code>absolute</code> is a Haskell record, but all we need worry about now is that the value of the integrated function can be retrieved from it by using <code>result</code>, as shown below:</p>
+<p>The result of <code>absolute</code> is a Haskell record, but all we need worry about now is that the
+value of the integrated function can be retrieved from it by using <code>result</code>, as shown below:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[17]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">result</span> <span class="p">(</span><span class="n">absolute</span> <span class="mf">1.0e-6</span> <span class="p">(</span><span class="n">trap</span> <span class="n">g</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">))</span>
@@ -3264,13 +3453,16 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you are wondering what just happened: the <code>simpson</code> and <code>trap</code> routines take a function of one parameter (the function to integrate, so <code>g</code> here) and a range over which to integrate (<span class="math">\(z=0\)</span> to <span class="math">\(z=2\)</span> here), and return a list of approximations (the <code>[Result]</code> return type) which (hopefully) converge on the answer. The <code>absolute</code> routine takes a limit value and a list of results, returning the first one whose error estimate is smaller than the given limit.</p>
+<p>If you are wondering what just happened: the <code>simpson</code> and <code>trap</code> routines take a function of one parameter (the function
+to integrate, so <code>g</code> here) and a range over which to integrate ($z=0$ to $z=2$ here), and return a list of approximations (the <code>[Result]</code> return type) which (hopefully) converge on the answer. The <code>absolute</code> routine takes a limit value and a list of results, returning the first one whose error estimate is smaller than the given limit.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">simpson</span>
@@ -3329,13 +3521,16 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can look at these return values, using the <code>take 3</code> function that returns the first three elements of a list, to see that the result has converged quickly:</p>
+<p>We can look at these return values, using the <code>take 3</code> function that returns the first three elements of a list, 
+to see that the result has converged quickly:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">take</span> <span class="mi">3</span> <span class="p">(</span><span class="n">trap</span> <span class="n">g</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">)</span>
@@ -3366,7 +3561,9 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">take</span> <span class="mi">3</span> <span class="p">(</span><span class="n">simpson</span> <span class="n">g</span> <span class="mi">0</span> <span class="mi">2</span><span class="p">)</span>
@@ -3400,13 +3597,16 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Getting back to the task at hand, I can define <code>daH</code> as a function that accepts <span class="math">\(\Omega_m\)</span> and <span class="math">\(z\)</span> and returns the angular-diameter distance, in units of the Hubble length, by saying:</p>
+<p>Getting back to the task at hand, I can define <code>daH</code> as a function that accepts $\Omega_m$ and $z$ 
+and returns the angular-diameter distance, in units of the Hubble length, by saying:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">daH</span> <span class="n">om</span> <span class="n">z</span> <span class="ow">=</span> <span class="kr">let</span> <span class="n">fs</span> <span class="ow">=</span> <span class="n">result</span> <span class="p">(</span><span class="n">absolute</span> <span class="mf">1.0e-6</span> <span class="p">(</span><span class="n">trap</span> <span class="p">(</span><span class="n">f</span> <span class="n">om</span><span class="p">)</span> <span class="mi">0</span> <span class="n">z</span><span class="p">))</span>
@@ -3428,14 +3628,17 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
     # I am assuming here that the integrate and trap methods are
     # defined somewhere else.
     fs = integrate(lambda z: f(om,z), 0, z, method=trap, abstol=1.0e-6)
-    return fs / (1+z)</code></pre>
-<p>Although not given explicitly, the compiler can infer that the two input arguments, and the result, have a type of <code>Double</code>:</p>
+    return fs / (1+z)
+</code></pre><p>Although not given explicitly, the compiler can infer that the two input arguments, and the result,
+have a type of <code>Double</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">daH</span>
@@ -3466,13 +3669,18 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As I want to plot up the angular-diameter distance as a function of redshift for several different cosmologies, I define a helper function that, given an <span class="math">\(\Omega_m\)</span> value, returns a list of <span class="math">\((z, dA(z))\)</span> points, which is in the form needed by the <code>line</code> command used earlier.</p>
+<p>As I want to plot up the angular-diameter distance as a function of redshift for several
+different cosmologies, I define a helper function that, given an $\Omega_m$ value, returns
+a list of $(z, dA(z))$ points, which is in the form needed by the <code>line</code> command used
+earlier.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[23]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c1">-- This uses the list of redshifts defined earlier.</span>
@@ -3506,7 +3714,8 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 <p>The Python equivalent would be:</p>
 <pre><code>def calcDAH(om):
     zs = np.arange(0, 10.1, 0.1)
-    return [(z, daH(om,z)) for z in zs]</code></pre>
+    return [(z, daH(om,z)) for z in zs]
+</code></pre>
 </div>
 </div>
 </div>
@@ -3521,7 +3730,9 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[24]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">toRenderable</span> <span class="p">(</span><span class="kr">do</span>
@@ -4466,13 +4677,17 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To get a value with physical units, we multiply <code>daH</code> by <code>c/</code><span class="math">\(H_0\)</span>, which, if the speed of light is in <code>km/s</code> and <span class="math">\(H_0\)</span> in <code>km/s/Mpc</code>, will give a value in Megaparsecs:</p>
+<p>To get a value with physical units, we multiply <code>daH</code> by <code>c/</code>$H_0$, which,
+if the speed of light is in <code>km/s</code> and $H_0$ in <code>km/s/Mpc</code>, will give a value
+in Megaparsecs:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[25]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c1">-- Calculate the angular-diameter distance for a flat Cosmology</span>
@@ -4510,7 +4725,9 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[26]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">map</span> <span class="p">(</span><span class="n">da</span> <span class="mf">0.3</span> <span class="mi">70</span><span class="p">)</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
@@ -4544,13 +4761,19 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As a sanity check, I used Ned Wright's <a href="http://www.astro.ucla.edu/~wright/CosmoCalc.html">CosmoCalc</a> calculator and recorded the distances for several redshifts. These are stored in the <code>nedWrightDA</code> list, and then I calculate the ratio of the distance I calculate to those from <code>CosmoCalc</code> (the <code>rel</code> list). As can be seen, the values are all close to 1.0.</p>
+<p>As a sanity check, I used Ned Wright&#39;s
+<a href="http://www.astro.ucla.edu/~wright/CosmoCalc.html">CosmoCalc</a> calculator and recorded
+the distances for several redshifts. These are stored in the <code>nedWrightDA</code> list,
+and then I calculate the ratio of the distance I calculate to those from <code>CosmoCalc</code>
+(the <code>rel</code> list). As can be seen, the values are all close to 1.0. </p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">nedWrightDA</span> <span class="ow">=</span> <span class="p">[</span><span class="mf">1259.0</span><span class="p">,</span> <span class="mf">1651.8</span><span class="p">,</span> <span class="mf">1710.5</span><span class="p">,</span> <span class="mf">1726.3</span><span class="p">]</span>
@@ -4602,17 +4825,20 @@ Result {result = 1.2094712042709923, errorEstimate = 3.2879929889872983e-9, eval
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The Python equivalent for calculating <code>rel</code> would be something like (where I have decided to use shorter variable names than above):</p>
+<p>The Python equivalent for calculating <code>rel</code> would be something like (where I have
+decided to use shorter variable names than above):</p>
 <pre><code>da = [da(0.3,70,z) for z in [0.5, 1, 1.2, 2]]
 nw = [1259.0, 1651.8, 1710.5, 1726.3]
-rel = np.asarray(da) / np.asarray(nw)</code></pre>
-<p>I can now repeat the previous plot, this time with physical units:</p>
+rel = np.asarray(da) / np.asarray(nw)
+</code></pre><p>I can now repeat the previous plot, this time with physical units:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">calcDA</span> <span class="n">om</span> <span class="ow">=</span> <span class="n">zip</span> <span class="n">zs</span> <span class="p">(</span><span class="n">map</span> <span class="p">(</span><span class="n">da</span> <span class="n">om</span> <span class="mi">70</span><span class="p">)</span> <span class="n">zs</span><span class="p">)</span>
@@ -5493,13 +5719,19 @@ rel = np.asarray(da) / np.asarray(nw)</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To get the linear distance between two points at the same redshift, separated by an angle of theta, we can use the small-angle approximation: convert the angle to radians and then multiply it by the angular-diameter distance. Astronomers use all kinds of funny units for angles; in this case I am assuming the input angle has units of arcminutes. As there are 60 arcminutes to a degree, the conversion to radians is just <span class="math">\(\pi / (180*60)\)</span>.</p>
+<p>To get the linear distance between two points at the same redshift, separated by an angle of theta,
+we can use the small-angle approximation: convert the angle to radians and then multiply it by the
+angular-diameter distance. Astronomers use all kinds of funny units for angles; in this case I
+am assuming the input angle has units of arcminutes. As there are 60 arcminutes to a degree, the
+conversion to radians is just $\pi / (180*60)$.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="c1">-- Given Omega_m, H_0 in km/s/Mpc, z, and an angle in arcminutes,</span>
@@ -5523,13 +5755,18 @@ rel = np.asarray(da) / np.asarray(nw)</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For a redshift of 2, with a closed cosmology and <span class="math">\(\Omega_m = 0.3\)</span>, the <code>CosmoCalc</code> calculator calculate a scale of 8.370 kiloparsecs per arcsec. How close do I get (given that one arcsec is 1/60 of an arcminute and I intentionally made <code>adist</code> return values in kpc):</p>
+<p>For a redshift of 2, with a closed cosmology and $\Omega_m = 0.3$, the 
+<code>CosmoCalc</code> calculator calculate a scale of 8.370 kiloparsecs per arcsec. How close
+do I get (given that one arcsec is 1/60 of an arcminute and I intentionally made
+<code>adist</code> return values in kpc):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[30]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist</span> <span class="mf">0.3</span> <span class="mi">70</span> <span class="mi">2</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">60</span><span class="p">)</span>
@@ -5566,20 +5803,21 @@ rel = np.asarray(da) / np.asarray(nw)</code></pre>
 <p>So, not bad agreement. As a reminder, the code I had to write to get this (stripping out all the non-essential bits, including niceties like type signatures and comments, from above) was:</p>
 <pre><code>f om z = let ol = 1 - om
          in 1 / sqrt( (1+z)^2 * (1 + om*z) - (2+z) * ol * z )
-         
+
 daH om z = let fs = result (absolute 1.0e-6 (trap (f om) 0 z))
            in fs / (1+z)
-           
+
 da om h0 z = daH om z * c / h0
   where
     c = 299792.458
-    
+
 adist om h0 z angle = 1000 * d * a
     where
       a = pi * angle / (180 * 60)
       d = da om h0 z
-      </code></pre>
-<p>If I wanted to make this code usable I would spend some time thinking about whether it is worth defining types especially for the matter density, Hubble's constant, or redshift values, to clarify routines like <code>adist</code> which take four <code>Double</code> values and it is easy to mix them up - e.g. swapping <code>om</code> and <code>h0</code> - leading to incorrect results. However, that's a discussion for another day.</p>
+</code></pre><p>If I wanted to make this code usable I would spend some time thinking about whether it is worth defining types
+especially for the matter density, Hubble&#39;s constant, or redshift values, to clarify routines like <code>adist</code> which take four <code>Double</code> values and it is easy to mix them up - e.g. swapping <code>om</code> and <code>h0</code> - leading to incorrect results. However,
+that&#39;s a discussion for another day.</p>
 </div>
 </div>
 </div>
@@ -5598,21 +5836,46 @@ adist om h0 z angle = 1000 * d * a
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The above calculation is fine, but I'd like to explicitly include the units in the calculation, so that you know the answer is in Mpc (or some other unit). There are several Haskell packages that support this; I have previously used the <a href="https://hackage.haskell.org/package/dimensional">dimensional</a> package and there is also <a href="https://hackage.haskell.org/package/unittyped">unittyped</a> and <a href="https://hackage.haskell.org/package/quantities">quantities</a>, but today I want to try the <a href="https://hackage.haskell.org/package/units">units</a> package. As I have not tried out the <a href="http://www.astropy.org/astropy-tutorials/Quantities.html">support for quantities and units in astropy</a> I do not provide Python equivalents for the rest of this notebook.</p>
-<p>Unfortunately, using ghc version 7.6.3 means that only the first version (<code>1.0.0</code>) of <code>units</code> can be used, which is a problem, since it doesn't build! So I decided to try out the <a href="https://hackage.haskell.org/package/dimensional-tf">dimensional-tf</a> package, since it a different approach to the <code>dimensional</code> package, which I have used. The difference between the two is not really relevant here; we can just look at is as being one way to model quantities and units in a physical calculation in Haskell. I hope to have time to repeat this with a more-recent version of <code>ghc</code> so that I can try out <code>units</code>.</p>
+<p>The above calculation is fine, but I&#39;d like to explicitly include the units in the calculation, so that
+you know the answer is in Mpc (or some other unit). There are several Haskell packages that
+support this; I have previously used the
+<a href="https://hackage.haskell.org/package/dimensional">dimensional</a> 
+package and there is also
+<a href="https://hackage.haskell.org/package/unittyped">unittyped</a>
+and
+<a href="https://hackage.haskell.org/package/quantities">quantities</a>, but today
+I want to try the <a href="https://hackage.haskell.org/package/units">units</a> package.
+As I have not tried out the 
+<a href="http://www.astropy.org/astropy-tutorials/Quantities.html">support for quantities and units in astropy</a>
+I do not provide Python equivalents for the rest of this notebook.</p>
+<p>Unfortunately, using ghc version 7.6.3 means that only the first version (<code>1.0.0</code>) of <code>units</code> can
+be used, which is a problem, since it doesn&#39;t build! So I decided to try out the
+<a href="https://hackage.haskell.org/package/dimensional-tf">dimensional-tf</a> 
+package, since it a different approach to the <code>dimensional</code> package, which I have 
+used. The difference between the two is not really relevant here; we can just look at
+is as being one way to model quantities and units in a physical calculation in Haskell.
+I hope to have time to repeat this with a more-recent version of <code>ghc</code> so that I can 
+try out <code>units</code>.</p>
 <p>To install the necessary package we need to use <code>cabal</code> again:</p>
 <pre><code>cabal install dimensional-tf --dry-run
 ... check that no problems are reported
 cabal install dimensional-tf
 ... this should be relatively quick as there&#39;s not that many
-... dependencies that need to be built</code></pre>
-<p>The following statement is similar to Python's <code>import foo.bar.baz as bob</code> statement; symbols defined by the module must be preceeded by the quaifier <code>P</code>. The reason for doing this is that this module provides versions of common mathematical operations - such as multiplication - which would conflict with the default versions. It will make it clear what version I am using, but is visually distracting, as you will soon see!</p>
+... dependencies that need to be built
+</code></pre><p>The following statement is similar to Python&#39;s <code>import foo.bar.baz as bob</code>
+statement; symbols defined by the module must be preceeded by the quaifier
+<code>P</code>. The reason for doing this is that this module provides versions of
+common mathematical operations - such as multiplication - which would
+conflict with the default versions. It will make it clear what version
+I am using, but is visually distracting, as you will soon see!</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[31]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kr">import</span> <span class="k">qualified</span> <span class="nn">Numeric.Units.Dimensional.TF.Prelude</span> <span class="k">as</span> <span class="n">P</span>
@@ -5634,7 +5897,9 @@ cabal install dimensional-tf
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[32]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c</span> <span class="ow">=</span> <span class="mf">299792458.0</span> <span class="kt">P</span><span class="o">.*~</span> <span class="p">(</span><span class="kt">P</span><span class="o">.</span><span class="n">meter</span> <span class="kt">P</span><span class="o">./</span> <span class="kt">P</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
@@ -5656,7 +5921,9 @@ cabal install dimensional-tf
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[33]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">c</span>
@@ -5673,9 +5940,7 @@ cabal install dimensional-tf
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<span class='get-type'>c :: forall a.
-Fractional a =>
-Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
+<span class='get-type'>c :: forall a. Fractional a => Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 
 </div>
@@ -5689,13 +5954,16 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This can be fixed by giving an explicit type, as shown below (it's not actually necessary to do so, but I do so because I can):</p>
+<p>This can be fixed by giving an explicit type, as shown below (it&#39;s not actually necessary
+to do so, but I do so because I can):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[34]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c</span> <span class="ow">::</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Velocity</span> <span class="kt">Double</span>
@@ -5709,7 +5977,9 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[35]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">c</span>
@@ -5740,15 +6010,42 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The type is now more readable, but in reality this is just a synonym for the original type (except that the <code>Fractional</code> constraint has been replaced by the use of an explicit type <code>Double</code>, which is a member of the <a href="http://hackage.haskell.org/package/base-4.7.0.2/docs/Prelude.html#t:Fractional"><code>Fractional</code> type class</a>). Although not relevant here - as I'm treating the module as something of a black box - the dimensions of the value are encoded here using <a href="https://wiki.haskell.org/Peano_numbers">Peano numbers</a>, where <code>Z</code> indicates <code>0</code>, <code>S a</code> is one more than <code>a</code> (so <code>S Z</code> is <code>1</code> and <code>S (S (S Z))</code> is <code>3</code>), and <code>N a</code> is used to negate <code>a</code>. The <code>Dim</code> statement from the original type of <code>c</code> can therefore be read as <code>Dim 1 0 -1 0 0 0 0</code>, so this suggests that the first element refers to length and the third refers to time. I believe the reason for using Peano numbers here is because they are inductively defined (the base case is 0 and the inductive step is add one), which means that the type checker can match up things as needed. One thing to note, if you've read this far into the paragraph, is that this information is only relevant when the code is compiled. This means that you only &quot;pay&quot; for the checking when you build the code (which can, unfortunately, take some time for particularly complex cases) rather than when you run it.</p>
-<p>More information on the API of the <code>dimensional-tf</code> package can be found in the <a href="https://github.com/bjornbm/dimensional-tf/blob/master/Numeric/Units/Dimensional/TF.lhs">source code</a> to this module, as it uses a literate programming style which means that the comments do not get displayed in the standard <a href="https://hackage.haskell.org/package/dimensional-tf-0.3.0.1/docs/Numeric-Units-Dimensional-TF.html">module documentation</a>. The main thing to note just now is that there are types for quantities - such as the speed of light in meters per second - and for units - such as second. These types are labelled <code>Quantity</code> or <code>Unit</code> and contain the relevant dimension information (the <code>Dim</code> type seen above) and the type of the numerical value (e.g. <code>Double</code>). Synonyms are used to make these more readable, such as <code>Velocity</code> meaning <code>Quantity DVelocity</code> and <code>DVelocity</code> being <code>Dim (S Z) Z (N (S Z)) Z Z Z Z</code>, which can sometimes be a bit confusing when you are trying to work out how everything fits together.</p>
+<p>The type is now more readable, but in reality this is just a synonym for the original type (except that the
+<code>Fractional</code> constraint has been replaced by the use of an explicit type <code>Double</code>, which is a member of the
+<a href="http://hackage.haskell.org/package/base-4.7.0.2/docs/Prelude.html#t:Fractional"><code>Fractional</code> type class</a>).
+Although not relevant here - as I&#39;m treating the module as something of a black box - the 
+dimensions of the value are encoded here using
+<a href="https://wiki.haskell.org/Peano_numbers">Peano numbers</a>, where <code>Z</code> indicates <code>0</code>, <code>S a</code> is one more than <code>a</code> (so
+<code>S Z</code> is <code>1</code> and <code>S (S (S Z))</code> is <code>3</code>), 
+and <code>N a</code> is used to negate <code>a</code>. The <code>Dim</code> statement from the original type of <code>c</code> can therefore
+be read as <code>Dim 1 0 -1 0 0 0 0</code>, so this suggests that the first element refers to length and the third refers
+to time. I believe the reason for using Peano numbers here is because they are inductively defined (the base
+case is 0 and the inductive step is add one), which means that the type checker can match up things as needed.
+One thing to note, if you&#39;ve read this far into the paragraph, is that this information is only relevant when
+the code is compiled. This means that you only &quot;pay&quot; for the checking when you build
+the code (which can, unfortunately, take some time for particularly complex cases) rather than when you run it.</p>
+<p>More information on the API of the <code>dimensional-tf</code> package
+can be found in the 
+<a href="https://github.com/bjornbm/dimensional-tf/blob/master/Numeric/Units/Dimensional/TF.lhs">source code</a>
+to this module, as it uses a literate programming style which means that the comments do not
+get displayed in the standard 
+<a href="https://hackage.haskell.org/package/dimensional-tf-0.3.0.1/docs/Numeric-Units-Dimensional-TF.html">module documentation</a>.
+The main thing to note just now is that there are types for quantities - such as the speed of light
+in meters per second - and for units - such as second. These types are labelled
+<code>Quantity</code> or <code>Unit</code> and contain the relevant dimension information (the <code>Dim</code> type seen above)
+and the type of the numerical value (e.g. <code>Double</code>). Synonyms are used to make these
+more readable, such as <code>Velocity</code> meaning <code>Quantity DVelocity</code> and
+<code>DVelocity</code> being <code>Dim (S Z) Z (N (S Z)) Z Z Z Z</code>, which can sometimes be a bit confusing
+when you are trying to work out how everything fits together.</p>
 <p>The symbol <code>c</code> now retains both the quantity and the units, as displaying it shows:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[36]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c</span>
@@ -5782,13 +6079,16 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The quantity stored in <code>c</code> can be extracted, converting to a given unit, using the <code>/~</code> operator, as shown below (note that this is one point where the use of the <code>P</code> prefix is visually distracting):</p>
+<p>The quantity stored in <code>c</code> can be extracted, converting to a given unit, using the <code>/~</code> operator,
+as shown below (note that this is one point where the use of the <code>P</code> prefix is visually distracting):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[37]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c</span> <span class="kt">P</span><span class="o">./~</span> <span class="p">(</span><span class="kt">P</span><span class="o">.</span><span class="n">kilo</span> <span class="kt">P</span><span class="o">.</span><span class="n">meter</span> <span class="kt">P</span><span class="o">./</span> <span class="kt">P</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
@@ -5822,13 +6122,17 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using it in a calculation is also somewhat unsatisfting, since you need to use the mathematical operators from the module - leading to visual clutter if you use the approach I have taken here - and the need to use constants such as <code>P._2</code> to represent the value <code>2</code>:</p>
+<p>Using it in a calculation is also somewhat unsatisfting, since you need to use the mathematical
+operators from the module - leading to visual clutter if you use the approach I have taken
+here - and the need to use  constants such as <code>P._2</code> to represent the value <code>2</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[38]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c</span> <span class="kt">P</span><span class="o">./</span> <span class="kt">P</span><span class="o">.</span><span class="n">_2</span>
@@ -5862,13 +6166,16 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Alternatively, I can &quot;convert&quot; a value into a dimensionless number by using the form <code>value *~ one</code> (which is needed when there is no pre-defined constant):</p>
+<p>Alternatively, I can &quot;convert&quot; a value into a dimensionless number by using the form <code>value *~ one</code> (which is needed
+when there is no pre-defined constant):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[39]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c</span> <span class="kt">P</span><span class="o">./</span> <span class="p">(</span><span class="mi">2</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">one</span><span class="p">)</span>
@@ -5902,13 +6209,16 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I define a symbol that represents one arcminute. The use of <code>1::Double</code> is just to make sure that this is a <code>Double</code> value, rather than a more general one, in a similar manner to how <code>c</code> was defined.</p>
+<p>Here I define a symbol that represents one arcminute. The use of <code>1::Double</code> is just to make sure that this is a <code>Double</code>
+value, rather than a more general one, in a similar manner to how <code>c</code> was defined.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[40]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">arcmin</span> <span class="ow">=</span> <span class="p">(</span><span class="mi">1</span><span class="ow">::</span><span class="kt">Double</span><span class="p">)</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">minuteOfArc</span>
@@ -5921,7 +6231,9 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[41]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">arcmin</span>
@@ -5952,13 +6264,18 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>One of the reasons for using a system which also encodes units is to make it an error for combining incompatible values; in this case trying to add together the speed of light and an angle is an error. Admittedly, a rather confusing one if you're not used to the Haskell type system.</p>
+<p>One of the reasons for using a system which also encodes units is to make it
+an error for combining incompatible values; in this case trying to add
+together the speed of light and an angle is an error. Admittedly, a
+rather confusing one if you&#39;re not used to the Haskell type system.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[42]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">arcmin</span> <span class="o">+</span> <span class="n">c</span>
@@ -5975,7 +6292,7 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<span class='err-msg'>Couldn't match type `Numeric.NumType.TF.S Numeric.NumType.TF.Z' with `Numeric.NumType.TF.Z'<br/>Expected type: P.Quantity P.DPlaneAngle Double<br/>  Actual type: P.Velocity Double<br/>In the second argument of `(+)', namely `c'<br/>In the expression: arcmin + c<br/>In an equation for `it': it = arcmin + c</span>
+<span class='err-msg'>Couldn't match type ‘Numeric.NumType.TF.S Numeric.NumType.TF.Z’ with ‘Numeric.NumType.TF.Z’<br/>Expected type: P.Quantity P.DPlaneAngle Double<br/>  Actual type: P.Velocity Double<br/>In the second argument of ‘(+)’, namely ‘c’<br/>In the expression: arcmin + c</span>
 </div>
 
 </div>
@@ -5989,13 +6306,15 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I guess that the &quot;native&quot; value for angles is radians, so let's check this:</p>
+<p>I guess that the &quot;native&quot; value for angles is radians, so let&#39;s check this:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[43]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">arcmin</span>
@@ -6035,7 +6354,9 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[44]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">pi</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">180</span><span class="p">)</span>
@@ -6069,13 +6390,16 @@ Quantity (Dim (S Z) Z (N (S Z)) Z Z Z Z) a</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I can also check that the numerical values are equal directly, by using <code>/~ radian</code> to extract then numeric value from <code>arcmin</code>:</p>
+<p>I can also check that the numerical values are equal directly, by
+using <code>/~ radian</code> to extract then numeric value from <code>arcmin</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[45]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">arcmin</span> <span class="kt">P</span><span class="o">./~</span> <span class="kt">P</span><span class="o">.</span><span class="n">radian</span> <span class="o">==</span> <span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">180</span><span class="p">))</span>
@@ -6109,13 +6433,16 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If I had not &quot;converted&quot; <code>arcmin</code> from a quantity to a standard value, using <code>/~ radian</code>, then I would have come across another rather frightening error message:</p>
+<p>If I had not &quot;converted&quot; <code>arcmin</code> from a quantity to a standard value, using <code>/~ radian</code>, then
+I would have come across another rather frightening error message:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[46]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">arcmin</span> <span class="o">==</span> <span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span><span class="o">*</span><span class="mi">180</span><span class="p">))</span>
@@ -6132,7 +6459,7 @@ True
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<span class='err-msg'>No instance for (Num (P.Quantity P.DPlaneAngle Double)) arising from a use of `*'<br/>Possible fix: add an instance declaration for (Num (P.Quantity P.DPlaneAngle Double))<br/>In the second argument of `(/)', namely `(60 * 180)'<br/>In the second argument of `(==)', namely `(pi / (60 * 180))'<br/>In the expression: arcmin == (pi / (60 * 180))<br/><br/>No instance for (Fractional (P.Quantity P.DPlaneAngle Double)) arising from a use of `/'<br/>Possible fix: add an instance declaration for (Fractional (P.Quantity P.DPlaneAngle Double))<br/>In the second argument of `(==)', namely `(pi / (60 * 180))'<br/>In the expression: arcmin == (pi / (60 * 180))<br/>In an equation for `it': it = arcmin == (pi / (60 * 180))<br/><br/>No instance for (Floating (P.Quantity P.DPlaneAngle Double)) arising from a use of `pi'<br/>Possible fix: add an instance declaration for (Floating (P.Quantity P.DPlaneAngle Double))<br/>In the first argument of `(/)', namely `pi'<br/>In the second argument of `(==)', namely `(pi / (60 * 180))'<br/>In the expression: arcmin == (pi / (60 * 180))</span>
+<span class='err-msg'>No instance for (Floating (P.Quantity P.DPlaneAngle Double)) arising from a use of ‘pi’<br/>In the first argument of ‘(/)’, namely ‘pi’<br/>In the second argument of ‘(==)’, namely ‘(pi / (60 * 180))’<br/>In the expression: arcmin == (pi / (60 * 180))<br/><br/>No instance for (Fractional (P.Quantity P.DPlaneAngle Double)) arising from a use of ‘/’<br/>In the second argument of ‘(==)’, namely ‘(pi / (60 * 180))’<br/>In the expression: arcmin == (pi / (60 * 180))<br/>In an equation for ‘it’: it = arcmin == (pi / (60 * 180))<br/><br/>No instance for (Num (P.Quantity P.DPlaneAngle Double)) arising from a use of ‘*’<br/>In the second argument of ‘(/)’, namely ‘(60 * 180)’<br/>In the second argument of ‘(==)’, namely ‘(pi / (60 * 180))’<br/>In the expression: arcmin == (pi / (60 * 180))</span>
 </div>
 
 </div>
@@ -6146,13 +6473,16 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I want to be able to handle lengths which contain parsecs, so I need to create a unit for this, using the <code>prefix</code> function:</p>
+<p>I want to be able to handle lengths which contain parsecs, so I need to create a unit
+for this, using the <code>prefix</code> function:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[47]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">parsec</span> <span class="ow">::</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Unit</span> <span class="kt">P</span><span class="o">.</span><span class="kt">DLength</span> <span class="kt">Double</span>
@@ -6175,7 +6505,9 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[48]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="mf">3.2</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">mega</span> <span class="n">parsec</span>
@@ -6215,7 +6547,9 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[49]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">hubbleConstant</span> <span class="ow">::</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Unit</span> <span class="kt">P</span><span class="o">.</span><span class="kt">DFrequency</span> <span class="kt">Double</span>
@@ -6232,13 +6566,20 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I included the explicit type to make things a bit more readable - the inferred value is <code>Dimensional DUnit (Dim Z Z (N (S Z)) Z Z Z Z) Double</code> - and also to ensure that the equation I used is sensible (i.e. that the units are correct). As an example, if I had missed out the &quot;per second&quot; part then I would have got the following error (I promise that you <em>can</em>, with enough experience, work out what's going on from these error messages):</p>
+<p>I included the explicit type to make things a bit more readable - the
+inferred value is 
+<code>Dimensional DUnit (Dim Z Z (N (S Z)) Z Z Z Z) Double</code> - and also to ensure that the equation I used is sensible (i.e. that
+the units are correct). As an example, if I had missed out the &quot;per second&quot;
+part then I would have got the following error (I promise that you <em>can</em>, 
+with enough experience, work out what&#39;s going on from these error messages):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[50]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">wrongConstant</span> <span class="ow">::</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Unit</span> <span class="kt">P</span><span class="o">.</span><span class="kt">DFrequency</span> <span class="kt">Double</span>
@@ -6256,7 +6597,7 @@ True
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<span class='err-msg'>Couldn't match type `Numeric.NumType.TF.Z' with `Numeric.NumType.TF.N Numeric.NumType.TF.Pos1'<br/>Expected type: P.Unit P.DFrequency Double<br/>  Actual type: Numeric.Units.Dimensional.TF.Dimensional P.DUnit (P.Div P.DLength P.DLength) Double<br/>In the expression: P.kilo P.meter P./ P.mega parsec<br/>In an equation for `wrongConstant': wrongConstant = P.kilo P.meter P./ P.mega parsec</span>
+<span class='err-msg'>Couldn't match type ‘Numeric.NumType.TF.Z’ with ‘Numeric.NumType.TF.N Numeric.NumType.TF.Pos1’<br/>Expected type: P.Unit P.DFrequency Double<br/>  Actual type: Numeric.Units.Dimensional.TF.Dimensional P.DUnit (P.Div P.DLength P.DLength) Double<br/>In the expression: P.kilo P.meter P./ P.mega parsec<br/>In an equation for ‘wrongConstant’: wrongConstant = P.kilo P.meter P./ P.mega parsec</span>
 </div>
 
 </div>
@@ -6270,13 +6611,16 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When the <code>hubbleConstant</code> is applied to a value, the result has a type of <code>Quantity DFrequency Double</code>, as shown below:</p>
+<p>When the <code>hubbleConstant</code> is applied to a value, the result has a type of <code>Quantity DFrequency Double</code>,
+as shown below:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[51]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span>
@@ -6307,7 +6651,9 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[52]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span>
@@ -6338,13 +6684,18 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since I will want to use this type a few times below, I define an alias for it, using the <code>type</code> command. After this, I can use <code>HConstant</code> to simplify signatures of functions that take a Hubble constant as a parameter; I also add in a <code>Length</code> alias, since this will also come in useful.</p>
+<p>Since I will want to use this type a few times below, I define an alias for it, using the <code>type</code>
+command. After this, I can use <code>HConstant</code> to simplify signatures of functions that take
+a Hubble constant as a parameter; I also add in a <code>Length</code> alias, since this will also
+come in useful.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[53]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kr">type</span> <span class="kt">HConstant</span> <span class="ow">=</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Quantity</span> <span class="kt">P</span><span class="o">.</span><span class="kt">DFrequency</span> <span class="kt">Double</span>
@@ -6361,23 +6712,24 @@ True
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With these definitions I should now be able to replicate the angular-diameter calculation, but this time tracking the types as well. As a reminder, I want:</p>
+<p>With these definitions I should now be able to replicate the angular-diameter
+calculation, but this time tracking the types as well. As a reminder, I want:</p>
 <pre><code>f om z = let ol = 1 - om
          in 1 / sqrt( (1+z)^2 * (1 + om*z) - (2+z) * ol * z )
-         
+
 daH om z = let fs = result (absolute 1.0e-6 (trap (f om) 0 z))
            in fs / (1+z)
-           
+
 da om h0 z = daH om z * c / h0
   where
     c = 299792.458
-    
+
 adist om h0 z angle = 1000 * d * a
     where
       a = pi * angle / (180 * 60)
       d = da om h0 z
-      </code></pre>
-<p>Since <code>f</code> and <code>daH</code> are dimensionless, I'll just re-use them and concentrate on <code>da</code> and <code>adist</code>.</p>
+</code></pre><p>Since <code>f</code> and <code>daH</code> are dimensionless, I&#39;ll just re-use them and concentrate on
+<code>da</code> and <code>adist</code>.</p>
 </div>
 </div>
 </div>
@@ -6387,18 +6739,31 @@ adist om h0 z angle = 1000 * d * a
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are four main points in the conversion of <code>da</code>:</p>
-<ol style="list-style-type: decimal">
-<li><p>I added a signature to ensure that the Hubble constant has the required units. This trades off generic behavior (accepting any quantity) against some measure of type safety (in the sense that I want to make sure the second argument has the units of Hubble's constant). The results below would not change if I did not give the signature.</p></li>
-<li><p>I have <em>not</em> had to convert <code>c</code> from <code>m/s</code> to <code>km/s</code> (or, equivalently, explictly convert the Hubble constant to account for the use of both <code>km</code> and <code>Mpc</code>).</p></li>
-<li><p>The value returned by <code>daH</code> is converted to a dimensionless quantity by &quot;multiplying&quot; it by <code>one</code>.</p></li>
-<li><p>The result does not look too different from the original form.</p></li>
+<ol>
+<li><p>I added a signature to ensure that the Hubble constant has the required
+units. This trades off generic behavior (accepting any quantity)
+against some measure of type safety (in the sense that I want to make
+sure the second argument has the units of Hubble&#39;s constant). The
+results below would not change if I did not give the signature.</p>
+</li>
+<li><p>I have <em>not</em> had to convert <code>c</code> from <code>m/s</code> to <code>km/s</code> (or, equivalently,
+explictly convert the Hubble constant to account for the use of both
+<code>km</code> and <code>Mpc</code>).</p>
+</li>
+<li><p>The value returned by <code>daH</code> is converted to a dimensionless quantity
+by &quot;multiplying&quot; it by <code>one</code>.</p>
+</li>
+<li><p>The result does not look too different from the original form.</p>
+</li>
 </ol>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[54]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">da2</span> <span class="ow">::</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">HConstant</span> <span class="ow">-&gt;</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">Length</span> 
@@ -6421,7 +6786,9 @@ adist om h0 z angle = 1000 * d * a
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[55]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist2</span> <span class="n">om</span> <span class="n">h0</span> <span class="n">z</span> <span class="n">angle</span> <span class="ow">=</span> <span class="n">da2</span> <span class="n">om</span> <span class="n">h0</span> <span class="n">z</span> <span class="kt">P</span><span class="o">.*</span> <span class="n">angle</span>
@@ -6437,13 +6804,18 @@ adist om h0 z angle = 1000 * d * a
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since I did not give a type signature, the inferred version does not require that the angle be dimensionless (shown by the fact that <code>d'</code>, which represents the dimensions of the value, is listed as <code>forall</code> rather than being an explicit value):</p>
+<p>Since I did not give a type signature, the inferred version does not
+require that the angle be dimensionless (shown by the fact that <code>d&#39;</code>,
+which represents the dimensions of the value, 
+is listed as <code>forall</code> rather than being an explicit value):</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[56]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kt">:</span><span class="kr">type</span> <span class="n">adist2</span>
@@ -6460,12 +6832,7 @@ adist om h0 z angle = 1000 * d * a
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<span class='get-type'>adist2 :: forall d'.
-Double
--> HConstant
--> Double
--> Dimensional DQuantity d' Double
--> Dimensional DQuantity (Mul DLength d') Double</span>
+<span class='get-type'>adist2 :: forall d'. Double -> HConstant -> Double -> Dimensional DQuantity d' Double -> Dimensional DQuantity (Mul DLength d') Double</span>
 </div>
 
 </div>
@@ -6485,7 +6852,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[57]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist3</span> <span class="ow">::</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">HConstant</span> <span class="ow">-&gt;</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Quantity</span> <span class="kt">P</span><span class="o">.</span><span class="kt">DPlaneAngle</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">Length</span>
@@ -6502,13 +6871,17 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The difference in type signatures can be seen if I give a non-angle value for the last argument: the <code>adist2</code> form returns a value whereas the <code>adist3</code> version raises an error:</p>
+<p>The difference in type signatures can be seen if I give a non-angle value for the
+last argument: the <code>adist2</code> form returns a value whereas the <code>adist3</code>
+version raises an error:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[58]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist2</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="p">(</span><span class="mi">1</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">meter</span><span class="p">)</span>
@@ -6539,7 +6912,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[59]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist3</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="p">(</span><span class="mi">1</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">meter</span><span class="p">)</span>
@@ -6556,7 +6931,7 @@ Double
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<span class='err-msg'>Couldn't match type `Numeric.NumType.TF.S Numeric.NumType.TF.Z' with `Numeric.NumType.TF.Z'<br/>Expected type: P.Unit P.DPlaneAngle Double<br/>  Actual type: P.Unit P.DLength Double<br/>In the second argument of `(P.*~)', namely `P.meter'<br/>In the fourth argument of `adist3', namely `(1 P.*~ P.meter)'<br/>In the expression: adist3 0.3 (70 P.*~ hubbleConstant) 2 (1 P.*~ P.meter)</span>
+<span class='err-msg'>Couldn't match type ‘Numeric.NumType.TF.S Numeric.NumType.TF.Z’ with ‘Numeric.NumType.TF.Z’<br/>Expected type: P.Unit P.DPlaneAngle Double<br/>  Actual type: P.Unit P.DLength Double<br/>In the second argument of ‘(P.*~)’, namely ‘P.meter’<br/>In the fourth argument of ‘adist3’, namely ‘(1 P.*~ P.meter)’</span>
 </div>
 
 </div>
@@ -6571,13 +6946,16 @@ Double
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>With this, I can repeat the earlier calculation, which gave</p>
-<pre><code>adist 0.3 70 2 (1/60) = 8.370893333112804</code></pre>
+<pre><code>adist 0.3 70 2 (1/60) = 8.370893333112804
+</code></pre>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[60]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist3</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="p">(</span><span class="mi">1</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">secondOfArc</span><span class="p">)</span>
@@ -6617,7 +6995,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[61]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist3</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="p">(</span><span class="mi">1</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">secondOfArc</span><span class="p">)</span> <span class="kt">P</span><span class="o">./~</span> <span class="kt">P</span><span class="o">.</span><span class="n">kilo</span> <span class="n">parsec</span>
@@ -6651,13 +7031,16 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is easy to change units, such as to use an angle in arcminutes and to convert the answer to <code>Mpc</code>:</p>
+<p>It is easy to change units, such as to use an angle in arcminutes and to convert
+the answer to <code>Mpc</code>:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[62]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">adist3</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="p">(</span><span class="mf">2.4</span> <span class="kt">P</span><span class="o">.*~</span> <span class="kt">P</span><span class="o">.</span><span class="n">minuteOfArc</span><span class="p">)</span> <span class="kt">P</span><span class="o">./~</span> <span class="kt">P</span><span class="o">.</span><span class="n">mega</span> <span class="n">parsec</span>
@@ -6701,15 +7084,21 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The luminosity of a source is equal to <span class="math">\(4 \pi d_l^2 f_x\)</span>, where <span class="math">\(d_l\)</span> is the distance to the source and <span class="math">\(f_x\)</span> its flux (this assumes a bolometric flux, since it ignores the <a href="http://en.wikipedia.org/wiki/K_correction">K correction</a>).</p>
-<p>For a source at a cosmological distance, the distance used is the <a href="http://en.wikipedia.org/wiki/Luminosity_distance">luminosity distance</a> - which is why I used the subscript <span class="math">\(l\)</span> - and it is defined as</p>
-<p><span class="math">\[d_l = (1+z) d_c\]</span></p>
+<p>The luminosity of a source is equal to $4 \pi d_l^2 f_x$, where $d_l$ is the 
+distance to the source and $f_x$ its flux (this assumes a bolometric flux, since it ignores the
+<a href="http://en.wikipedia.org/wiki/K_correction">K correction</a>).</p>
+<p>For a source at a cosmological distance, the distance used is the
+<a href="http://en.wikipedia.org/wiki/Luminosity_distance">luminosity distance</a> - which is why I
+used the subscript $l$ - and it is defined as</p>
+<p>$$d_l = (1+z) d_c$$</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[63]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">dlH</span> <span class="n">om</span> <span class="n">z</span> <span class="ow">=</span> <span class="kr">let</span> <span class="n">fs</span> <span class="ow">=</span> <span class="n">result</span> <span class="p">(</span><span class="n">absolute</span> <span class="mf">1.0e-6</span> <span class="p">(</span><span class="n">trap</span> <span class="p">(</span><span class="n">f</span> <span class="n">om</span><span class="p">)</span> <span class="mi">0</span> <span class="n">z</span><span class="p">))</span>
@@ -6729,13 +7118,16 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Trying it out, I get (using the same Cosmology as previously) a luminosity distance to an object at <span class="math">\(z=2\)</span> of:</p>
+<p>Trying it out, I get (using the same Cosmology as previously) a luminosity distance to an object at $z=2$
+of:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[64]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">dl</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span>
@@ -6775,7 +7167,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[65]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">dl</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="kt">P</span><span class="o">./~</span> <span class="kt">P</span><span class="o">.</span><span class="n">mega</span> <span class="n">parsec</span>
@@ -6809,14 +7203,17 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The <a href="http://www.astro.ucla.edu/~wright/CosmoCalc.html">CosmoCalc</a> page returns 15537.0 Mpc or 50.675 Gly. Now, can I easily convert the answer above to light years?</p>
+<p>The <a href="http://www.astro.ucla.edu/~wright/CosmoCalc.html">CosmoCalc</a> page returns 
+15537.0 Mpc or 50.675 Gly. Now, can I easily convert the answer above to light years?</p>
 <p>For this, I need to import the <code>year</code> value from the &quot;non SI&quot; module of <code>dimensional-tf</code></p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[66]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="kr">import</span> <span class="nn">Numeric.Units.Dimensional.TF.NonSI</span> <span class="p">(</span><span class="nf">year</span><span class="p">)</span>
@@ -6832,13 +7229,19 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>and use it - together with the definition of <code>c</code> above, to calculate the distance light travels in a year. I am not happy with the following, as I calculate a value in meters, remove the meters, then make it into a unit of meters, but I couldn't see how else to convert a <code>Quantity</code> - which is what <code>c * year</code> is - into a <code>Unit</code>.</p>
+<p>and use it - together with the definition of <code>c</code> above, to calculate the distance
+light travels in a year. I am not happy with the following, as I calculate a value 
+in meters, remove the meters, then make it into a unit of meters, but I couldn&#39;t
+see how else to convert a <code>Quantity</code> - which is what <code>c * year</code> is - into
+a <code>Unit</code>.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[67]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">lightYear</span> <span class="ow">=</span> <span class="kr">let</span> <span class="n">d</span> <span class="ow">=</span> <span class="n">c</span> <span class="kt">P</span><span class="o">.*</span> <span class="p">(</span><span class="mi">1</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">year</span><span class="p">)</span> <span class="kt">P</span><span class="o">./~</span> <span class="kt">P</span><span class="o">.</span><span class="n">meter</span>
@@ -6861,7 +7264,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[68]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">dl</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="kt">P</span><span class="o">./~</span> <span class="kt">P</span><span class="o">.</span><span class="n">giga</span> <span class="n">lightYear</span>
@@ -6895,13 +7300,15 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Finally it's time to create a function that converts a flux to a luminosity:</p>
+<p>Finally it&#39;s time to create a function that converts a flux to a luminosity:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[69]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">luminosity</span> <span class="ow">::</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">HConstant</span> <span class="ow">-&gt;</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">P</span><span class="o">.</span><span class="kt">Irradiance</span> <span class="kt">Double</span> <span class="ow">-&gt;</span> <span class="kt">P</span><span class="o">.</span><span class="kt">RadiantIntensity</span> <span class="kt">Double</span>
@@ -6920,13 +7327,16 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As an X-ray astronomer I'm used to working in units of <code>ergs</code> (please don't ask why), so I create a few units built on this: one for flux and one for luminosity.</p>
+<p>As an X-ray astronomer I&#39;m used to working in units of <code>ergs</code> (please don&#39;t ask why),
+so I create a few units built on this: one for flux and one for luminosity.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[70]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">erg</span> <span class="ow">=</span> <span class="kt">P</span><span class="o">.</span><span class="n">prefix</span> <span class="p">(</span><span class="mf">1.0e-7</span><span class="ow">::</span><span class="kt">Double</span><span class="p">)</span> <span class="kt">P</span><span class="o">.</span><span class="n">joule</span>
@@ -6946,13 +7356,16 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With these I can finally calculate the luminosity of a source (<span class="math">\(z=2\)</span>, <span class="math">\(\Omega_m=0.3\)</span>, <span class="math">\(\Omega_\lambda=0.7\)</span>, <span class="math">\(H_0 = 70\ {\rm km/s/Mpc}\)</span>) which has a flux of <span class="math">\(2 \times 10^{-13}\ {\rm erg/cm^{2}/s}\)</span>.</p>
+<p>With these I can finally calculate the luminosity of a source ($z=2$, $\Omega_m=0.3$, $\Omega_\lambda=0.7$,
+$H_0 = 70\ {\rm km/s/Mpc}$) which has a flux of $2 \times 10^{-13}\ {\rm erg/cm^{2}/s}$.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[71]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">lum</span> <span class="ow">=</span> <span class="n">luminosity</span> <span class="mf">0.3</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span> <span class="mi">2</span> <span class="p">(</span><span class="mf">2e-13</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">ergFlux</span><span class="p">)</span>
@@ -6974,7 +7387,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[72]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">lum</span>
@@ -7008,13 +7423,15 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>which can be converted to several units; such as <span class="math">\({\rm Watts}\)</span></p>
+<p>which can be converted to several units; such as ${\rm Watts}$</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[73]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">lum</span> <span class="kt">P</span><span class="o">./~</span> <span class="kt">P</span><span class="o">.</span><span class="n">watt</span>
@@ -7048,13 +7465,16 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>which is - unsurprisingly - the same numerical value, or <span class="math">\(\rm{erg / cm^2 / s}\)</span>, which has a numerical value <span class="math">\(10^7\)</span> times this:</p>
+<p>which is - unsurprisingly - the same numerical value, or $\rm{erg / cm^2 / s}$, 
+which has a numerical value $10^7$ times this:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[74]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">lum</span> <span class="kt">P</span><span class="o">./~</span> <span class="n">ergLum</span>
@@ -7088,7 +7508,7 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Don't forget that this would need some form of K-correction, unless you have a bolometric flux measurement.</p>
+<p>Don&#39;t forget that this would need some form of K-correction, unless you have a bolometric flux measurement.</p>
 </div>
 </div>
 </div>
@@ -7107,15 +7527,22 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Whilst I have your attention, how about calculating the <a href="http://en.wikipedia.org/wiki/Friedmann_equations#Density_parameter">critical density</a> of the Universe, which is defined as:</p>
-<p><span class="math">\[\rho_{\rm crit} = \frac{3 H^2}{8 \pi G}\]</span></p>
-<p>For this, I need a value for the <a href="http://en.wikipedia.org/wiki/Gravitational_constant">Gravitational constant</a>, where the <code>meter ^ pos3</code> and <code>second ^ pos2</code> terms represent <span class="math">\(m^3\)</span> and <span class="math">\(s^2\)</span> respectively.</p>
+<p>Whilst I have your attention, how about calculating the 
+<a href="http://en.wikipedia.org/wiki/Friedmann_equations#Density_parameter">critical density</a>
+of the Universe, which is defined as:</p>
+<p>$$\rho_{\rm crit} = \frac{3 H^2}{8 \pi G}$$</p>
+<p>For this, I need a value for the 
+<a href="http://en.wikipedia.org/wiki/Gravitational_constant">Gravitational constant</a>, 
+where the <code>meter ^ pos3</code> and <code>second ^ pos2</code> terms represent $m^3$ and $s^2$
+respectively.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[75]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">bigG</span> <span class="ow">=</span> <span class="mf">6.67428e-11</span> <span class="kt">P</span><span class="o">.*~</span> <span class="p">(</span><span class="kt">P</span><span class="o">.</span><span class="n">metre</span> <span class="kt">P</span><span class="o">.^</span> <span class="kt">P</span><span class="o">.</span><span class="n">pos3</span> <span class="kt">P</span><span class="o">./</span> <span class="kt">P</span><span class="o">.</span><span class="n">kilo</span> <span class="kt">P</span><span class="o">.</span><span class="n">gram</span> <span class="kt">P</span><span class="o">./</span> <span class="kt">P</span><span class="o">.</span><span class="n">second</span> <span class="kt">P</span><span class="o">.^</span> <span class="kt">P</span><span class="o">.</span><span class="n">pos2</span><span class="p">)</span>
@@ -7137,7 +7564,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[76]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">criticalDensity</span> <span class="n">h</span> <span class="ow">=</span> <span class="kt">P</span><span class="o">.</span><span class="n">_3</span> <span class="kt">P</span><span class="o">.*</span> <span class="n">h</span> <span class="kt">P</span><span class="o">.^</span> <span class="kt">P</span><span class="o">.</span><span class="n">pos2</span> <span class="kt">P</span><span class="o">./</span> <span class="p">(</span><span class="kt">P</span><span class="o">.</span><span class="n">_8</span> <span class="kt">P</span><span class="o">.*</span> <span class="kt">P</span><span class="o">.</span><span class="n">pi</span> <span class="kt">P</span><span class="o">.*</span> <span class="n">bigG</span><span class="p">)</span>
@@ -7153,13 +7582,15 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Applying this to <span class="math">\(H_0 = 70\ {\rm km/s/Mpc}\)</span> gives:</p>
+<p>Applying this to $H_0 = 70\ {\rm km/s/Mpc}$ gives:</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[77]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c70</span> <span class="ow">=</span> <span class="n">criticalDensity</span> <span class="p">(</span><span class="mi">70</span> <span class="kt">P</span><span class="o">.*~</span> <span class="n">hubbleConstant</span><span class="p">)</span>
@@ -7200,7 +7631,9 @@ Double
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">
+In&nbsp;[78]:
+</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="nf">c70</span> <span class="kt">P</span><span class="o">./~</span> <span class="p">(</span><span class="kt">P</span><span class="o">.</span><span class="n">kilo</span> <span class="kt">P</span><span class="o">.</span><span class="n">metricTon</span> <span class="kt">P</span><span class="o">./</span> <span class="kt">P</span><span class="o">.</span><span class="n">astronomicalUnit</span> <span class="kt">P</span><span class="o">.^</span> <span class="kt">P</span><span class="o">.</span><span class="n">pos3</span><span class="p">)</span>
@@ -7234,9 +7667,12 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The use of the <code>P.</code> prefix is definitely distracting here. The way I've used the <code>dimensional</code> package in the past is to have most of the code in a module, and in that module I have imported the module directly. This means that the code can be written in the more-natural form</p>
-<pre><code>criticalDensity h = _3 * h ^ pos2 / (_8 * pi * bigG)</code></pre>
-<p>The downside to this is that normal arithmetic becomes more verbose.</p>
+<p>The use of the <code>P.</code> prefix is definitely distracting here. The way I&#39;ve used the <code>dimensional</code>
+package in the past is to have most of the code in a module, and in that module
+I have imported the module directly. This means that the code can be written in
+the more-natural form</p>
+<pre><code>criticalDensity h = _3 * h ^ pos2 / (_8 * pi * bigG)
+</code></pre><p>The downside to this is that normal arithmetic becomes more verbose.</p>
 </div>
 </div>
 </div>
@@ -7255,7 +7691,10 @@ Double
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There you go; I hope you enjoyed it. If you have any questions, then please use the <a href="https://github.com/DougBurke/astro-haskell/issues">GitHub issues page</a> or contact me on Twitter at <a href="https://twitter.com/doug_burke">https://twitter.com/doug_burke</a>.</p>
+<p>There you go; I hope you enjoyed it. If you have any questions, then please use the
+<a href="https://github.com/DougBurke/astro-haskell/issues">GitHub issues page</a> or
+contact me on Twitter at
+<a href="https://twitter.com/doug_burke">https://twitter.com/doug_burke</a>.</p>
 </div>
 </div>
 </div>
